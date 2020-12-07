@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+    {{- partial "head.html" . -}}
+
+<body class="is-boxed has-animations">
+
+    {{- partial "header.html" . -}}
+
+        <main>
+
+			<section class="newsletter section">
+                <div class="container-sm">
+                    <div class="newsletter-inner section-inner">
+                        
+                            <h2 class="section-title mt-0">{{  .Title}}</h2>
+    <p>
+      By {{ .Params.Author }}
+    </p>
+    <p>
+      Posted {{ .Date.Format "January 2, 2006" }}
+      <span class="tags">
+        in
+        {{ range .Params.tags }}
+          <a class="tag" href="/tags/{{ . | urlize }}">{{ . }}</a>
+        {{ end }}
+      </span>
+    </p>
+    <p>
+      Reading time: {{ math.Round (div (countwords .Content) 200.0) }} minutes.
+    </p>
+
+    <p class="hero-paragraph">{{ .Content }}</p>
+
+  </section>
+  </div>
+  </section>
+  </main>
+  
+  {{- partial "footer.html" . -}}
+  
+  </body>
+  </html>
