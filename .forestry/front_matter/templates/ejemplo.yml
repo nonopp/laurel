@@ -1,4 +1,10 @@
 ---
 label: Ejemplo
 hide_body: false
-fields: []
+fields:
+- name: texto
+  type: text
+  config:
+    required: false
+  label: Texto
+  description: Descripción texto
