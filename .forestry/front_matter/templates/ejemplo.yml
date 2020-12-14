@@ -8,3 +8,5 @@ fields:
     required: false
   label: Texto
   description: Descripción texto
+pages:
+- content/nueva.md
